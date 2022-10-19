@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Nhập vào a và b, tính a^2, a^b</title>
+</head>
+<body>
+Nhập:
+<input type="number" id="valuea" oninput="calculate()" onchange="calculate()">
+<input type="number" id="valueb" oninput="calculate()" onchange="calculate()">
+<p id="show"></p>
+<script>
+    function calculate () {
+        let a= document.getElementById('valuea').value;
+        let b= document.getElementById('valueb').value;
+        document.getElementById('show').innerHTML = 'a^2: ' + a*a + ' a^b: ' + a**b;
+    }
+</script>
+</body>
+</html>

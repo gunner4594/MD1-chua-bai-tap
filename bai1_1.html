@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a</title>
+</head>
+<body>
+Nhập:
+<input type="number" id="value" oninput="calculate()" onchange="calculate()">
+<p id="show"></p>
+<script>
+function calculate () {
+    let a = document.getElementById('value').value;
+    let perimeter = 4*a;
+    let area = a**2;
+    document.getElementById('show').innerHTML = 'Perimeter: ' + perimeter + '; ' + 'Area: ' + area
+}
+</script>
+</body>
+</html>

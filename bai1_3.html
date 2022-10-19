@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Nhập vào a và b, tính tổng các số từ a đến b</title>
+</head>
+<body>
+Nhập:
+<input type="number" id="valuea" oninput="calculate()" onchange="calculate()">
+<input type="number" id="valueb" oninput="calculate()" onchange="calculate()">
+<p id="show"></p>
+<script>
+    function calculate () {
+        let a= document.getElementById('valuea').value;
+        let b= document.getElementById('valueb').value;
+        let total =0;
+        for (i=a;i<=b;i++) {
+            total = parseInt(total);
+            total= total + i;
+        }
+        document.getElementById('show').innerHTML = 'Tổng các số từ a đến b: ' + total;
+    }
+</script>
+</body>
+</html>

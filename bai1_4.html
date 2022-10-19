@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Nhập vào a là năm, in ra thế kỷ.</title>
+</head>
+<body>
+<input type="number" id="value" oninput="calculate()" onchange="calculate()">
+<p id="show"></p>
+<script>
+    function calculate () {
+        let a = document.getElementById('value').value;
+        let b = Math.floor(a/100)+1;
+        document.getElementById('show').innerHTML = 'Năm: ' + a + ' thuộc thế kỷ: ' + b
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5: Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của
+      (ae chủ động tìm lại điều kiện lần lượt của các câu):
+      1 tam giác?
+      1 tam giác cân?
+      1 tam giác đều?
+      1 tam giác vuông?</title>
+</head>
+<body>
+<input type="number" id="valuea" oninput="check()" onchange="check()">
+<input type="number" id="valueb" oninput="check()" onchange="check()">
+<input type="number" id="valuec" oninput="check()" onchange="check()">
+<p id="show"></p>
+<script>
+    function check () {
+        let a= document.getElementById('valuea').value;
+        let b= document.getElementById('valueb').value;
+        let c= document.getElementById('valuec').value;
+        if ((a>0) && (b>0) && (c>0) && (a+b>c) && (b+c>a) && (c+a>b)) {
+            document.getElementById('show').innerHTML = '3 cạnh thỏa mãn điều kiện'
+        }
+    }
+</script>
+</body>
+</html>
